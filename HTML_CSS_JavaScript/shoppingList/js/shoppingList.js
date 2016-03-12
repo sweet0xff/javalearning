@@ -1,4 +1,5 @@
 window.onload = function() {
+	//解决老版本IE浏览器兼容的问题
 	if (!document.getElementsByClassName) {
 		document.getElementsByClassName= function(cls) {
 		var ret= [];
@@ -25,7 +26,7 @@ window.onload = function() {
 	var deleteAll = document.getElementById("deleteAll");
 
 
-	//计算价格
+	//计算总价格
 	function getTotal() {
 		var selected = 0 ;
 		var price = 0;
@@ -42,7 +43,7 @@ window.onload = function() {
 		priceTotal.innerHTML = price.toFixed(2);
 	}
 	
-	//小计价格
+	//计算每一行的价格
 	function getSubTotal(tr) {
 		var tds = tr.cells;	
 		var price = parseFloat(tds[2].innerHTML);
@@ -50,7 +51,7 @@ window.onload = function() {
 		var SubTotal = parseFloat(price*count);
 		tds[4].innerHTML = SubTotal.toFixed(2);
 	}
-
+	//实现点击选择框的效果
 	for( var i = 0; i < checkInputs.length; i++){
 		checkInputs[i].onclick = function () {
 			if(this.className==="check-all check") {
@@ -65,14 +66,7 @@ window.onload = function() {
 			getTotal();
 		}
 	}
-	
-//	selected.onclick = function() {
-//		if(foot.className = "foot show")  {
-//			foot.className  = "foot show"
-//		}else {
-//			foot.className = "foot";
-//		}
-//	}
+	//为每一行绑定事件
 	for(var i = 0; i < tr.length;i ++) {
 		tr[i].onclick= function(e) {
 			e = e ||window.event;
@@ -97,10 +91,10 @@ window.onload = function() {
 					}
 				getSubTotal(this);
 				break;
-				
+				//为每一行添加删除功能
 				case "delete":
 					if(this.getElementsByTagName("input")[0].checked){
-						var conf = confirm("Are you sure?");
+						var conf = confirm("Are you sure?");//弹出确认删除的提示框
 						if(conf) {
 							this.parentNode.removeChild(this);
 						}
@@ -111,6 +105,7 @@ window.onload = function() {
 			}
 			getTotal();
 		}
+		//实现从输入框输入购买数量的功能
 		tr[i].getElementsByTagName("input")[1].onkeyup = function (){
 			var val = parseInt(this.value);
 			var tr = this.parentNode.parentNode;
@@ -128,7 +123,7 @@ window.onload = function() {
 			getTotal();
 		}
 	}
-		
+	//为全部删除绑定事件	
 	deleteAll.onclick = function() {
 		if(selectTotal.innerHTML !=0) {
 			var conf = confirm("Are you sure?")
