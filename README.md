@@ -4,6 +4,6 @@
 
 HTML、CSS 、JavaScript的学习主要是：
 
-    1.O'REILLY的Head First 系列，包括Head First HTML and  CSS，HeadFirst JavaScript；
+    1. O'REILLY的Head First 系列，包括Head First HTML and  CSS，HeadFirst JavaScript；
     
-    2.JavaScript DOM编程艺术（第2版）。
+    2. JavaScript DOM编程艺术（第2版）。
