@@ -1,0 +1,150 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: #666;
+	text-decoration: none;
+}
+.on {
+	background: rgb(238,246,255);
+}
+body{
+	padding: 20px;
+}
+
+.fl{
+	float: left;
+}
+
+.fr{
+	float: right;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0px;
+	border: 0;
+	text-align: center;
+	width: 937px;
+	
+}
+
+th,td{
+	border: 1px solid #CADEFF;
+}
+
+th {
+	background: #e2f2ff;
+	border-top: 3px solid #a7cbff;
+	height: 30px;
+}
+
+td {
+	padding: 10px;	
+	color: #444;
+}
+ tbody tr:hover {
+ 	background: RGB(238,246,255);
+ }
+ 
+ .checkbox {
+ 	width: 60px;
+ }
+ 
+ .good {
+ 	width: 300px;
+ }
+
+img {
+	width: 100px;
+	height: 80px;
+}
+.good span {
+	width: 180px;
+	text-align: left;
+	float: left;
+}
+
+.price {
+    width: 130px;
+}
+.count {
+    width: 90px;
+}
+.count .add,.count input,.count .reduce {
+	float:left;
+}
+
+.count .add,.count .reduce {
+	height: 23px;
+	width: 17px;
+	border: 1px solid #e5e5e5;
+	text-align: center;
+}
+.count .add:hover,.count .reduce:hover {
+	text-align: center;
+	border-color: red;
+	cursor: pointer;
+}
+.count input {
+	width: 40px;
+	height: 15px;
+	padding: 4px;
+	border: 1px solid #aaa;
+	/*z-index: 2;*/
+}
+.subtotal {
+    width: 150px;
+    color: red;
+    font-weight: bold;
+}
+.operation {
+    width: 80px;
+}
+.operation span:hover {
+	cursor: pointer;
+	color: red;
+	text-decoration: none;
+}
+
+.foot {
+	width: 935px;
+	margin-top: 10px;
+	color: #666;
+	height: 48px;
+	border: 1px solid #c8c8c8;
+	background-color: #eaeaea;
+}
+.foot div,.foot a {
+	line-height: 48px;
+	height: 48px;
+} 
+
+.foot .select-all {
+	width: 100px;
+	line-height: 48px;
+	padding-left: 5px;
+	color: #666
+}
+
+.foot .close {
+	border-left: 1px solid #c8c8c8;
+	width: 100px;
+	font-weight: bold;
+	text-align: center;
+	cursor: pointer;
+}
+.foot .total {
+	margin: 0 200px;
+	cursor: pointer;
+}
+.foot #pricerTotal,foot #selectedTotal {
+	color: red;
+	font-family: "微软雅黑";
+	font-weight: blod;
+}
+.foot .selected{
+	cursor: pointer;
+}
