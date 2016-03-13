@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>exemple</title>
+		<script>
+			window.onload = function() {
+				var par = document.getElementById("exemple");
+				alert(typeof par.nodeName);
+				alert(typeof par.style);
+				alert("the color is " + par.style.color);
+				alert("the font-family is " +par.style.fontFamily);
+				alert("the font-size is " + par.style.fontSize);
+				par.style.font= "3em 'Times',serif";
+			}
+		</script>
+	</head>
+	<body>
+		<p id="exemple" style="color: #999999;font-family: 'Arial',sans-serif;
+			font-size: 1em;">
+			This is an exemple of a paragraph.
+		</p>
+	</body>
+</html>
