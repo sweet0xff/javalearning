@@ -7,3 +7,6 @@
 
 #### SQL学习的参考书籍：
 1. SQL必知必会（第四版），以MySQL为学习平台。
+#### Java
+1. Head First Java.
+2. Core Java Volume 1.
