@@ -1,6 +1,6 @@
 /**
  * 利用内部类实现的链表.
- * Created by james on 2016/4/3.
+ * Created by Zeng on 2016/4/3.
  */
 public class LinkTest3 {
 
