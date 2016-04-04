@@ -1,6 +1,6 @@
 /**
  * 实现了一个简单的链表操作.
- * Created by james on 2016/4/3.
+ * Created by Zeng on 2016/4/3.
  */
 public class LinkTest {
 
