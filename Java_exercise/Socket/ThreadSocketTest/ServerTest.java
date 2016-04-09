@@ -16,7 +16,7 @@ public class ServerTest {
 }
 
 class Server{
-    private static final int SERVER_PORT = 8888;
+    public static final int SERVER_PORT = 8888;
     public Server(){
         try {
             ServerSocket ss = new ServerSocket(SERVER_PORT);
