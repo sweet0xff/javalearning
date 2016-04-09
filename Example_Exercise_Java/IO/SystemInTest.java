@@ -5,6 +5,7 @@ import java.io.InputStream;
 import java.sql.SQLOutput;
 
 /**
+ * System实例化对象使用的事PrintStream类对象进行的输出设备显示.
  * Created by zeng on 16-4-9.
  */
 public class SystemInTest {
