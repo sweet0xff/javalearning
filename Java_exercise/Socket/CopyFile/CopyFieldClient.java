@@ -4,7 +4,7 @@ import java.net.*;
 import java.io.*;
 
 /**
- * Created by Administrator on 2016/4/5.
+ * Created by Zeng on 2016/4/5.
  */
 public class CopyFieldClient {
     public static void main(String [] agrs){
@@ -18,7 +18,7 @@ class Client{
            Socket s = new Socket(address,Server.SERVER_PORT);
 
            OutputStream out = s.getOutputStream();
-           FileInputStream fo = new FileInputStream("C:\\logdata.txt");
+           FileOutputStream fo = new FileOutputStream("D:\\logdata.txt");
 
            byte[] b = new byte[1024];
            int len =-1;
