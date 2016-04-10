@@ -8,6 +8,7 @@ import java.io.*;
  */
 public class CopyFieldServer {
     public static void main(String [] agrs){
+	Server server = new Server;
 
     }
 }

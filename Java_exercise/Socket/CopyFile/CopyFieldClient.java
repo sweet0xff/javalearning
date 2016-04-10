@@ -8,6 +8,7 @@ import java.io.*;
  */
 public class CopyFieldClient {
     public static void main(String [] agrs){
+        Client client = new Client;
 
     }
 }
