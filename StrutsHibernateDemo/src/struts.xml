@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="aboutadmin" namespace="/" extends="struts-default">
+		<action name="Admin_*" class="org.xxx.web.action.AdminAction" method="{1}">
+			<result name="success">/index.jsp</result>
+			<result name="error">/login.jsp</result>
+		</action>
+	</package>
+	
+	<package name="abountstudent" namespace="/" extends="struts-default">
+		<action name="Student_*" class="org.xxx.web.action.StudentAction" method="{1}">
+			<result name="edit">/edit.jsp</result>
+			<result name="error">/error.jsp</result>
+			<result name="success">/success.jsp</result>
+
+		</action>
+	</package>
+
+</struts>    
