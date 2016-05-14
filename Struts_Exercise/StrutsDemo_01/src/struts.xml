@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="hello" namespace="/" extends="struts-default">
+		<action name="helloworld" class="org.xxx.web.action.FirstDemoAction">
+			<result name="success">/index.jsp</result>
+		</action>
+	</package>
+	
+	<package name="AbountLogin" namespace="/" extends="struts-default">
+		<action name="login" class="org.xxx.web.action.DemoAction_2">
+			<result name="success">/hello.jsp</result>
+			<result name="error">/login_2.jsp</result>
+		</action>
+		
+		<action name="NbLogin" class="org.xxx.web.action.DemoAction_3">
+			<result name = "success">/hello.jsp</result>
+			<result name = "sorry">/login_3.jsp</result>
+		</action>
+	</package>
+
+	<package name="AboutMusic" namespace="/" extends="struts-default">
+
+		<action name="music_*" class="org.xxx.web.action.DemoAction_4" method="{1}">
+			<result name="delete" type = "chain" >
+				<param name="actionName">music_find</param>	
+			</result>
+			<result name="find" >/find.jsp</result>
+			<result name = "findbyid">/updatepro.jsp</result>
+			<result name = "update" type = "chain">
+				<param name="actionName">music_find</param>
+			</result>
+			<result name = "sorry">/index.jsp</result>
+		</action>
+		
+	</package>
+	
+	<package name="aboutcheckcode" namespace="/" extends="struts-default">
+		<action name="checkcode" class = "org.xxx.web.action.ServletApi">
+		<result >/check.jsp</result>
+		</action>
+	</package>
+	
+	<package name="abountifelse" namespace="/" extends="struts-default">
+		<action name="lable_*" class="org.xxx.web.action.LabelAction" method="{1}">
+			<result name="{1}" >/{1}.jsp</result>
+		</action>
+	</package>
+</struts>    
