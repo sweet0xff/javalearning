@@ -1,0 +1,67 @@
+<!--%@ page language="java" import="java.util.*" pageEncoding="GBK"%>
+<%@ taglib  prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib  prefix="s" uri="/struts-tags"%>-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>音乐列表页面</title>
+    <link rel="stylesheet" type="text/css" href="css/list.css">
+  </head>
+<body>
+
+
+<div>
+	<table width="700" cellspacing="0" cellpadding="0" class="tong">
+		<tr height="24px">
+		   <th align="center" width="56"  id="bortop1">
+		     <div class="liTi"><div class="neiDiv">序号</div></div>
+		   </th>
+		   <th align="center" width="80" id="bortop1">
+		     <div class="liTi"><div class="neiDiv">歌曲名</div></div>
+		   </th>
+		   <th align="center" width="80"  id="bortop1">
+		     <div class="liTi"><div class="neiDiv">歌手名</div></div>
+		   </th>
+		   <th align="center" width="80"  id="bortop1">
+		     <div class="liTi"><div class="neiDiv">歌曲大小</div></div>
+		   </th>
+		   <th align="center" width="120" id="bortop1">
+		     <div class="liTi"><div class="neiDiv">试听</div></div>
+		   </th>
+		   <th align="center" width="120" id="bortop1">
+		     <div class="liTi"><div class="neiDiv">下载</div></div>
+		   </th>
+		   <th align="center" width="120" id="bortop2">
+		     <div class="liTi"><div class="neiDiv">操作</div></div>
+		   </th>
+		</tr>
+		
+		  <tr onMouseOver="this.bgColor='#E8F7FF'" onMouseOut="this.bgColor='#FFFFFF'" height="20px">
+			  <td  id="bor1" align="center">1</td>
+			  <td  id="bor1" align="center">今生共相伴</td>
+			  <td  id="bor1" align="center">谢霆锋</td>
+			  <td  id="bor1" align="center">4.5M</td>
+			  <td  id="bor1" align="center"><img src="image/st.png"></td>
+			  <td  id="bor1" align="center"><img src="image/xz.png"></td>
+			  <td  id="bor2" align="center">
+			    <a href="deleteMusic.action?music.musicNo=${music.musicNo}" style="text-decoration: none">删除</a>
+			    <a href="musicManager!querySpecifiedMusic.action?music.musicNo=${music.musicNo}" style="text-decoration: none">修改</a>
+			  </td>
+		  </tr>
+          <!---->
+		    <tr onMouseOver="this.bgColor='#E8F7FF'" onMouseOut="this.bgColor='#FFFFFF'" height="20px">
+			  <td  id="bor1" align="center">2</td>
+			  <td  id="bor1" align="center">大约在冬季</td>
+			  <td  id="bor1" align="center">齐秦</td>
+			  <td  id="bor1" align="center">4.2M</td>
+			  <td  id="bor1" align="center"><img src="image/st.png"></td>
+			  <td  id="bor1" align="center"><img src="image/xz.png"></td>
+			  <td  id="bor2" align="center">
+			    <a href="deleteMusic.action?music.musicNo=${music.musicNo}" style="text-decoration: none">删除</a>
+			    <a href="musicManager!querySpecifiedMusic.action?music.musicNo=${music.musicNo}" style="text-decoration: none">修改</a>
+			  </td>
+		  </tr>
+	</table>
+</div>
+<body>
+</html>
