@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<constant name="struts.multipart.maxSize" value="9999999999"></constant>
+<package name="aboutload" namespace="/" extends="struts-default">
+	<action name="file_*" class="org.xxx.web.action.LoadAction" method="{1}">
+		<result name="down" type="stream">
+			<param name="contentDisposition">
+				attachment;filename=${uploadFileName}
+			</param>
+		</result>
+		<result name="success">/index.jsp</result>
+		<result name="filelist">/list.jsp</result>
+	</action>
+</package>
+
+</struts>    
