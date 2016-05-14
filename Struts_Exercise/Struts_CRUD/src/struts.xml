@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+    <package name="abountadmin" namespace="/" extends="struts-default">
+    	<action name="admin_login" class="org.xxx.web.action.AdminAction" method="login">
+    		<result name = "success">/index.jsp</result>
+    		<result name= "error">/login.jsp</result>
+    	</action>
+    </package>
+    
+    <package name="abountstudent" namespace="/" extends="json-default">
+   		<action name="student_*" class="org.xxx.web.action.StudentAction" method="{1}">
+   			<result name="success" type="json">/index.jsp</result>
+   		</action>
+    </package>
+
+</struts>
