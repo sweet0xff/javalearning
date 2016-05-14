@@ -1,0 +1,6 @@
+.cc { width:491px; height:345px; background-image:url(../images/dl1-bg.jpg);} 
+ .inf{ padding-top:70px; padding-left:70px;} 
+ .inf ul { list-style:none;  padding:0px; margin:0px;} 
+inf ul li{ line-height:40px;font-size:14px; font-weight:bold;} 
+.inf ul li span{font-size:12px;font-weight: normal;} 
+.dl{ text-align:center;} .ipt{width:180px;height:18px}

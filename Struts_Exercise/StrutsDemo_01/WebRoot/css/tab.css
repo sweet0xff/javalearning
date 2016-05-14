@@ -1,0 +1,24 @@
+
+	body{ margin:5px; font-size:12px}
+
+	.tong{ font-size:12px}
+	#bortop{border-top:1px; border-right:0px; border-bottom:1px; border-left:1px; border-color:#5AC9FE; border-style:solid;background-color:#A6E0FF;}
+	#bortop1{border-top:1px; border-right:0px; border-bottom:0px; border-left:1px; border-color:#5AC9FE; border-style:solid;background-color:#A6E0FF;}
+	#bortop2{border-top:1px; border-right:1px; border-bottom:1px; border-left:1px; border-color:#5AC9FE;border-style:solid; background-color:#A6E0FF}
+	#bor1{border-top:0px; border-right:0px; border-bottom:1px; border-left:1px; border-style:solid; border-color:#5AC9FE}
+	#bor2{border-top:0px; border-right:1px; border-bottom:1px; border-left:1px; border-style:solid; border-color:#5AC9FE}/*E8F7FF œ‚«∂—’…´÷µ*/
+	#topcenterright2{margin:3px 0px 0px 760px}
+	.table2{ margin:5px 0px 0px 0px}
+	.text1{ text-align:center; background-color:#E8F7FF; font-size:12px}
+	.txt{ border-bottom:1px solid  #000000 ;  border-top:0px; border-right:0px ;border-left:0px;  background-color: transparent; width:90px}
+	.txt2{ border:0px ; background-color: transparent; width:90px}
+	#bor1A{border-top:1px; border-right:0px; border-bottom:0px; border-left:1px; border-style:solid; border-color:#5AC9FE}
+	#bor1AB{border-top:1px; border-right:1px; border-bottom:0px; border-left:1px; border-style:solid; border-color:#5AC9FE}
+	#bor1AA{border-top:1px; border-right:0px; border-bottom:1px; border-left:1px; border-style:solid; border-color:#5AC9FE}
+	#bor1BA{border-top:1px; border-right:1px; border-bottom:1px; border-left:1px; border-style:solid; border-color:#5AC9FE}
+	#bor1B{border-top:1px; border-right:1px; border-bottom:0px; border-left:1px; border-style:solid; border-color:#5AC9FE}
+	#bor2A{border-top:1px; border-right:1px; border-bottom:1px; border-left:0px; border-style:solid; border-color:#5AC9FE;background-color:#E8F7FF}
+	#borRR1{border-top:1px; border-right:0px; border-bottom:1px; border-left:1px; border-style:solid; border-color:#5AC9FE}
+	#borRR2{border-top:1px; border-right:1px; border-bottom:1px; border-left:1px; border-style:solid; border-color:#5AC9FE}
+	#bor3A{border-top:0px; border-right:1px; border-bottom:1px; border-left:0px; border-style:solid; border-color:#5AC9FE;background-color:#E8F7FF}
+    .ipt{border:0px}
