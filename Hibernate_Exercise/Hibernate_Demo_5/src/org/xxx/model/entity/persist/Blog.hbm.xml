@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+	<class name="org.xxx.model.entity.persist.Blog" table="blog">
+		<id name="id" column="id" type="java.lang.Integer">
+			<generator class="native"></generator>
+		</id>
+
+		<property name="tittle" column="title" type="java.lang.String"></property>
+		<property name="content" column="content" type="java.lang.String"></property>
+		<property name="creat_time" column="create_time" type="java.util.Date"></property>
+		<property name="type" column="type" type ="java.lang.String"></property>
+		<set name="comments" cascade="all" inverse="true">
+			<!-- 此处的blog_id指的是Comment中的blog_id -->
+			<key column="blog_id"></key>
+			<one-to-many class="org.xxx.model.entity.persist.Comment"/>
+			
+		</set>
+	</class>
+</hibernate-mapping>
