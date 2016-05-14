@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+<bean id="pet" class="org.xxx.model.entity.Pet">
+	<property name="petname" value="阿黃"/>
+	<property name="petage" value = "1" />
+</bean>
+<bean id = "person" class="org.xxx.model.entity.Person">
+	<constructor-arg index = "0" value="admi" />
+	<constructor-arg index = "1" value = "111" />
+	<property name="pname" value = "zg" />
+	<property name="password" value = "222"/>
+	<property name="pet" ref="pet" />
+	
+	<property name="games" >
+		<list>
+			<value>刺客信條</value>
+			<value>GTA5</value>
+			<value>使命召喚</value>
+		</list>
+	</property>
+	
+	<property name="foods">
+		<array>
+			<value>蘋果</value>
+			<value>香蕉</value>
+		</array>
+	</property>
+	<property name="config">
+		<map>
+			<entry>
+				<key>
+					<value>URL</value>
+				</key>
+				<value>jdbc:mysql://127.0.0.1:3306/test</value>
+			</entry>
+			<entry>
+				<key>
+					<value>USER</value>
+				</key>
+				<value>sa</value>
+			</entry>
+			<entry>
+				<key>
+					<value>PASSWORD</value>
+				</key>
+				<value>sa</value>
+			</entry>
+		</map>
+	</property>
+</bean>
+
+</beans>
