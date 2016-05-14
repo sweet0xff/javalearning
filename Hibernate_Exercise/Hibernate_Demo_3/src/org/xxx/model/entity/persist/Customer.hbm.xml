@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="org.xxx.model.entity.persist.Customer" table="t_customer">
+		<id name="id" column="id" type="java.lang.Integer">
+			<generator class="native"></generator>
+		</id>
+		
+		<property name="name" column="name" type="java.lang.String" ></property>
+		<property name="password" column="password" type="java.lang.String"></property>
+		<property name="birthday" column="birthday" type="java.sql.Date"></property>
+
+		<property name="age" column="age" type="java.lang.Integer"></property>
+		<property name="register" column="registeredTime" type="java.sql.Timestamp"></property>
+		<property name="addr" column="addr" type="java.lang.String"></property>
+		<set name="orders" cascade="all" inverse="true"> 
+			<!-- 此处的CUSTUMER_ID指的是Orders中的CUSTOMER_ID -->
+			<key column="CUSTOMER_ID"></key>
+			<one-to-many class="org.xxx.model.entity.persist.Orders"/>
+		</set>
+		
+		<!-- 此处的eid指的是customer表中的字段 -->
+		<many-to-one name="email" column="eid" cascade="all" class="org.xxx.model.entity.persist.Email"
+			unique="true"></many-to-one>
+	</class>
+</hibernate-mapping>

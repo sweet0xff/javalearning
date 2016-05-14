@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="org.xxx.model.entity.persist.Item" table="t_item">
+		<id name="iid" column="ID" type="java.lang.Integer">
+			<generator class="native"></generator>
+		</id>
+		<property name="iname" column="NAME" type="java.lang.String"></property>
+		<property name="basePrice" column="BASE_PRICE" type="java.lang.Double"></property>
+		<set name="categories" table="CATEGORY_ITEM" inverse="true">
+			<key column="ITEM_ID"></key>
+			<many-to-many class="org.xxx.model.entity.persist.Category" column="CATEGORY_ID"></many-to-many>
+
+		</set>
+	</class>
+</hibernate-mapping>

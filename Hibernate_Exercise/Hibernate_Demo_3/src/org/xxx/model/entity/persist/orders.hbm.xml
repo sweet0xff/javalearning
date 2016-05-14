@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+	<class name="org.xxx.model.entity.persist.Orders" table="t_order">
+		<id name="id" column = "ID" type="java.lang.Integer">
+			<generator class="native"></generator>
+		</id>
+		
+		<property name="orderNumber" column="ORDER_NUMBER" type="java.lang.String"></property>
+		<property name="orderPrice" column="ORDER_PRICE" type="java.lang.Double"></property>
+		<many-to-one name="customer" column="CUSTOMER_ID" cascade="all"
+			class="org.xxx.model.entity.persist.Customer" not-null="true"	
+			lazy="proxy"></many-to-one>
+	</class>
+</hibernate-mapping>
