@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd" xmlns:tx="http://www.springframework.org/schema/tx">
+
+
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="url" value="jdbc:mysql://127.0.0.1:3306/test"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="root"></property>
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+	</bean>
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+			</props>
+		</property>
+		<property name="annotatedClasses">
+			<list>
+				<value>org.xxx.model.entity.persist.Admin</value>
+				<value>org.xxx.model.entity.persist.Students</value>
+				<value>org.xxx.model.entity.persist.Classtype</value></list>
+		</property></bean>
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<tx:annotation-driven transaction-manager="transactionManager" /><bean
+		id="AdminDAO" class="org.xxx.model.dao.AdminDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+</bean>
+	<bean id="StudentsDAO"
+		class="org.xxx.model.dao.StudentsDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="ClasstypeDAO"
+		class="org.xxx.model.dao.ClasstypeDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+		<!-- 关于admin -->
+	<bean id="admin" class="org.xxx.model.entity.persist.Admin"/>
+	<bean id="adminDAO" class="org.xxx.model.dao.AdminDAO">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id = "adminService" class="org.xxx.model.service.impl.AdminServiceImpl">
+		<property name="adminDao" ref="adminDAO"></property>
+	</bean>
+		
+	<bean id = "adminAction" class="org.xxx.web.action.AdminAction">
+		<property name="admin" ref="admin"></property>
+		<property name="adminService" ref="adminService"></property>
+	</bean>
+		
+	<!-- 关于学生的 -->
+	<bean id = "students" class="org.xxx.model.entity.persist.Students" />
+	<bean id="classtype" class="org.xxx.model.entity.persist.Classtype" />
+	<bean id="classtypeDAO" class= "org.xxx.model.dao.ClasstypeDAO">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<bean id="studentsDAO" class="org.xxx.model.dao.StudentsDAO">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="studentsService" class="org.xxx.model.service.impl.StudentsServiceImpl">
+		<property name="studentsDAO" ref="studentsDAO"></property>
+	</bean>
+	<bean id="classtypeService" class="org.xxx.model.service.impl.ClasstypeServiceImpl">
+		<property name="classtypeDAO" ref="classtypeDAO"></property>
+	</bean>
+	<bean id="studentsAction" class="org.xxx.web.action.StudentsAction">
+		<property name="studentsService" ref="studentsService"></property>
+		<property name="classtypeService" ref="classtypeService"></property>
+	</bean>
+
+	</beans>
